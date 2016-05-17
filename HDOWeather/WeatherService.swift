@@ -16,8 +16,28 @@ class WeatherService {
         // Do nothing
     }
     
-    func forecast() {
-        
+    func forecast() -> Promise<WeatherForecast> {
+        return Promise { (onFulfilled, onRejected) in
+            self._locationService
+                .current()
+                .then { [weak self] (location) in
+                    guard let me = self else {
+                        onRejected(NSError(domain: "com.heydanno.HDOWeather", code: 400, userInfo: ["message": "Service no longer exists"]))
+                        return
+                    }
+                    me._openWeatherMapService
+                        .forecastForLatitude(location.coordinate.latitude, longitude: location.coordinate.longitude)
+                        .then { (payload) in
+                            guard let forecast = WeatherForecast.from(payload) else {
+                                onRejected(NSError(domain: "com.heydanno.HDOWeather", code: 500, userInfo: ["message": "Data was not in expected format"]))
+                                return
+                            }
+                            onFulfilled(forecast)
+                        }
+                        .error(onRejected)
+                }
+                .error(onRejected)
+        }
     }
     
     // Private
