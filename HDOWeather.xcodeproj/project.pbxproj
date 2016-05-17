@@ -17,6 +17,7 @@
 		18BC548C1CE96BE30073F676 /* HDOService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BC548A1CE96BE30073F676 /* HDOService.framework */; };
 		18BC54901CE974950073F676 /* OpenWeatherMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC548F1CE974950073F676 /* OpenWeatherMapService.swift */; };
 		18BC54941CE995D80073F676 /* OpenWeatherMapResponsePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC54931CE995D80073F676 /* OpenWeatherMapResponsePayload.swift */; };
+		18BC54C21CEAD2920073F676 /* HDOLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BC54C11CEAD2920073F676 /* HDOLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		18BC548A1CE96BE30073F676 /* HDOService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HDOService.framework; path = Carthage/Build/iOS/HDOService.framework; sourceTree = "<group>"; };
 		18BC548F1CE974950073F676 /* OpenWeatherMapService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapService.swift; sourceTree = "<group>"; };
 		18BC54931CE995D80073F676 /* OpenWeatherMapResponsePayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapResponsePayload.swift; sourceTree = "<group>"; };
+		18BC54C11CEAD2920073F676 /* HDOLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HDOLocation.framework; path = Carthage/Build/iOS/HDOLocation.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			files = (
 				18BC548B1CE96BE30073F676 /* HDOPromise.framework in Frameworks */,
 				18BC548C1CE96BE30073F676 /* HDOService.framework in Frameworks */,
+				18BC54C21CEAD2920073F676 /* HDOLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,7 @@
 		18BC54881CE96BCF0073F676 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18BC54C11CEAD2920073F676 /* HDOLocation.framework */,
 				18BC54891CE96BE30073F676 /* HDOPromise.framework */,
 				18BC548A1CE96BE30073F676 /* HDOService.framework */,
 			);
@@ -189,6 +193,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/HDOPromise.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/HDOService.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/HDOLocation.framework",
 			);
 			outputPaths = (
 			);
