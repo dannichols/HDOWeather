@@ -18,6 +18,9 @@
 		18BC54901CE974950073F676 /* OpenWeatherMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC548F1CE974950073F676 /* OpenWeatherMapService.swift */; };
 		18BC54941CE995D80073F676 /* OpenWeatherMapResponsePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC54931CE995D80073F676 /* OpenWeatherMapResponsePayload.swift */; };
 		18BC54C21CEAD2920073F676 /* HDOLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BC54C11CEAD2920073F676 /* HDOLocation.framework */; };
+		18BC54C61CEAD5680073F676 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC54C51CEAD5680073F676 /* WeatherService.swift */; };
+		18BC54C91CEAD6090073F676 /* OpenWeatherMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BC54C81CEAD6090073F676 /* OpenWeatherMap.plist */; };
+		18BC54CB1CEAD65E0073F676 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC54CA1CEAD65E0073F676 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		18BC548F1CE974950073F676 /* OpenWeatherMapService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapService.swift; sourceTree = "<group>"; };
 		18BC54931CE995D80073F676 /* OpenWeatherMapResponsePayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapResponsePayload.swift; sourceTree = "<group>"; };
 		18BC54C11CEAD2920073F676 /* HDOLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HDOLocation.framework; path = Carthage/Build/iOS/HDOLocation.framework; sourceTree = "<group>"; };
+		18BC54C51CEAD5680073F676 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		18BC54C81CEAD6090073F676 /* OpenWeatherMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OpenWeatherMap.plist; sourceTree = "<group>"; };
+		18BC54CA1CEAD65E0073F676 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +77,12 @@
 			isa = PBXGroup;
 			children = (
 				18BC54911CE988710073F676 /* App */,
+				18BC54C71CEAD5F50073F676 /* Config */,
 				18BC548E1CE974780073F676 /* Services */,
 				1870BD671CE95D9100F54B6E /* ViewController.swift */,
 				1870BD691CE95D9100F54B6E /* Main.storyboard */,
 				1870BD6F1CE95D9100F54B6E /* Assets.xcassets */,
 				1870BD711CE95D9100F54B6E /* LaunchScreen.storyboard */,
-				1870BD741CE95D9100F54B6E /* Info.plist */,
 				1870BD6C1CE95D9100F54B6E /* HDOWeather.xcdatamodeld */,
 			);
 			path = HDOWeather;
@@ -96,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				18BC54921CE995A00073F676 /* OpenWeatherMap */,
+				18BC54C51CEAD5680073F676 /* WeatherService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -104,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				1870BD651CE95D9100F54B6E /* AppDelegate.swift */,
+				18BC54CA1CEAD65E0073F676 /* Config.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -115,6 +123,15 @@
 				18BC54931CE995D80073F676 /* OpenWeatherMapResponsePayload.swift */,
 			);
 			name = OpenWeatherMap;
+			sourceTree = "<group>";
+		};
+		18BC54C71CEAD5F50073F676 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1870BD741CE95D9100F54B6E /* Info.plist */,
+				18BC54C81CEAD6090073F676 /* OpenWeatherMap.plist */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +195,7 @@
 			files = (
 				1870BD731CE95D9100F54B6E /* LaunchScreen.storyboard in Resources */,
 				1870BD701CE95D9100F54B6E /* Assets.xcassets in Resources */,
+				18BC54C91CEAD6090073F676 /* OpenWeatherMap.plist in Resources */,
 				1870BD6B1CE95D9100F54B6E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,7 +229,9 @@
 				1870BD6E1CE95D9100F54B6E /* HDOWeather.xcdatamodeld in Sources */,
 				1870BD681CE95D9100F54B6E /* ViewController.swift in Sources */,
 				18BC54941CE995D80073F676 /* OpenWeatherMapResponsePayload.swift in Sources */,
+				18BC54CB1CEAD65E0073F676 /* Config.swift in Sources */,
 				1870BD661CE95D9100F54B6E /* AppDelegate.swift in Sources */,
+				18BC54C61CEAD5680073F676 /* WeatherService.swift in Sources */,
 				18BC54901CE974950073F676 /* OpenWeatherMapService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
