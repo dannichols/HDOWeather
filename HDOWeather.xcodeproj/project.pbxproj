@@ -13,6 +13,10 @@
 		1870BD6E1CE95D9100F54B6E /* HDOWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1870BD6C1CE95D9100F54B6E /* HDOWeather.xcdatamodeld */; };
 		1870BD701CE95D9100F54B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1870BD6F1CE95D9100F54B6E /* Assets.xcassets */; };
 		1870BD731CE95D9100F54B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1870BD711CE95D9100F54B6E /* LaunchScreen.storyboard */; };
+		18BC548B1CE96BE30073F676 /* HDOPromise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BC54891CE96BE30073F676 /* HDOPromise.framework */; };
+		18BC548C1CE96BE30073F676 /* HDOService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BC548A1CE96BE30073F676 /* HDOService.framework */; };
+		18BC54901CE974950073F676 /* OpenWeatherMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC548F1CE974950073F676 /* OpenWeatherMapService.swift */; };
+		18BC54941CE995D80073F676 /* OpenWeatherMapResponsePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC54931CE995D80073F676 /* OpenWeatherMapResponsePayload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		1870BD6F1CE95D9100F54B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1870BD721CE95D9100F54B6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1870BD741CE95D9100F54B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BC54891CE96BE30073F676 /* HDOPromise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HDOPromise.framework; path = Carthage/Build/iOS/HDOPromise.framework; sourceTree = "<group>"; };
+		18BC548A1CE96BE30073F676 /* HDOService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HDOService.framework; path = Carthage/Build/iOS/HDOService.framework; sourceTree = "<group>"; };
+		18BC548F1CE974950073F676 /* OpenWeatherMapService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapService.swift; sourceTree = "<group>"; };
+		18BC54931CE995D80073F676 /* OpenWeatherMapResponsePayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapResponsePayload.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BC548B1CE96BE30073F676 /* HDOPromise.framework in Frameworks */,
+				18BC548C1CE96BE30073F676 /* HDOService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,7 @@
 		1870BD591CE95D9100F54B6E = {
 			isa = PBXGroup;
 			children = (
+				18BC54881CE96BCF0073F676 /* Frameworks */,
 				1870BD641CE95D9100F54B6E /* HDOWeather */,
 				1870BD631CE95D9100F54B6E /* Products */,
 			);
@@ -56,7 +67,8 @@
 		1870BD641CE95D9100F54B6E /* HDOWeather */ = {
 			isa = PBXGroup;
 			children = (
-				1870BD651CE95D9100F54B6E /* AppDelegate.swift */,
+				18BC54911CE988710073F676 /* App */,
+				18BC548E1CE974780073F676 /* Services */,
 				1870BD671CE95D9100F54B6E /* ViewController.swift */,
 				1870BD691CE95D9100F54B6E /* Main.storyboard */,
 				1870BD6F1CE95D9100F54B6E /* Assets.xcassets */,
@@ -65,6 +77,40 @@
 				1870BD6C1CE95D9100F54B6E /* HDOWeather.xcdatamodeld */,
 			);
 			path = HDOWeather;
+			sourceTree = "<group>";
+		};
+		18BC54881CE96BCF0073F676 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18BC54891CE96BE30073F676 /* HDOPromise.framework */,
+				18BC548A1CE96BE30073F676 /* HDOService.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18BC548E1CE974780073F676 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				18BC54921CE995A00073F676 /* OpenWeatherMap */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		18BC54911CE988710073F676 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1870BD651CE95D9100F54B6E /* AppDelegate.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		18BC54921CE995A00073F676 /* OpenWeatherMap */ = {
+			isa = PBXGroup;
+			children = (
+				18BC548F1CE974950073F676 /* OpenWeatherMapService.swift */,
+				18BC54931CE995D80073F676 /* OpenWeatherMapResponsePayload.swift */,
+			);
+			name = OpenWeatherMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +123,7 @@
 				1870BD5E1CE95D9100F54B6E /* Sources */,
 				1870BD5F1CE95D9100F54B6E /* Frameworks */,
 				1870BD601CE95D9100F54B6E /* Resources */,
+				18BC548D1CE96C820073F676 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -133,6 +180,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18BC548D1CE96C820073F676 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/HDOPromise.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/HDOService.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1870BD5E1CE95D9100F54B6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,7 +205,9 @@
 			files = (
 				1870BD6E1CE95D9100F54B6E /* HDOWeather.xcdatamodeld in Sources */,
 				1870BD681CE95D9100F54B6E /* ViewController.swift in Sources */,
+				18BC54941CE995D80073F676 /* OpenWeatherMapResponsePayload.swift in Sources */,
 				1870BD661CE95D9100F54B6E /* AppDelegate.swift in Sources */,
+				18BC54901CE974950073F676 /* OpenWeatherMapService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +256,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -203,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -234,6 +302,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -242,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -253,8 +322,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = HDOWeather/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.heydanno.HDOWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -264,8 +334,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = HDOWeather/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.heydanno.HDOWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -290,6 +361,7 @@
 				1870BD791CE95D9100F54B6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
